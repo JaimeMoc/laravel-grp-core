@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -32,5 +33,31 @@ class AuthController extends Controller
     public function logout(Request $request){
         $request->user()->tokens()->delete();
         return response()->json(['message' => 'Sesión cerrada']);
+    }
+
+    /**
+     * Redirige al login de Microsoft (SSO)
+     */
+    public function redirectToMicrosoft(){
+        return Socialite::driver('azure')->redirect();
+    }
+
+    public function handleMicrosoftCallback(){
+        $microsoftUser = Socialite::driver('azure')->user();
+        $user = User::firstOrCreate(
+            ['email' => $microsoftUser->getEmail()],
+            [
+                'name' => $microsoftUser->getName(),
+                'role_id' => 1 //Falta mapeo por roles (Admin)
+            ]
+        );
+
+        $token = $user->createToken('auth_token', [$user->role->name])->plainTextToken;
+
+        return response()->json([
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+            'role' => $user->role->name,
+        ]);
     }
 }
