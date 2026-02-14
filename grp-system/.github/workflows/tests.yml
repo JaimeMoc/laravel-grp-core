@@ -46,7 +46,7 @@ jobs:
       - name: Copy Environment File
         run: cp .env.example .env
 
-      - name: Generate Application Key
+      - name: Generate application Key
         run: php artisan key:generate
 
       - name: Build Assets
