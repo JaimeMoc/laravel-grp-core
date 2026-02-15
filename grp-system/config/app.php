@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | application Name
     |--------------------------------------------------------------------------
     |
     | This value is the name of your application, which will be used when the
@@ -17,7 +17,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Environment
+    | application Environment
     |--------------------------------------------------------------------------
     |
     | This value determines the "environment" your application is currently
@@ -30,7 +30,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Debug Mode
+    | application Debug Mode
     |--------------------------------------------------------------------------
     |
     | When your application is in debug mode, detailed error messages with
@@ -43,7 +43,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application URL
+    | application URL
     |--------------------------------------------------------------------------
     |
     | This URL is used by the console to properly generate URLs when using
@@ -56,7 +56,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Timezone
+    | application Timezone
     |--------------------------------------------------------------------------
     |
     | Here you may specify the default timezone for your application, which
@@ -69,7 +69,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Locale Configuration
+    | application Locale Configuration
     |--------------------------------------------------------------------------
     |
     | The application locale determines the default locale that will be used
@@ -123,4 +123,37 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'providers' => [
+        /*
+        * Laravel Framework Service Providers...
+        */
+
+        Illuminate\Auth\AuthServiceProvider::class,
+        Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        Illuminate\Bus\BusServiceProvider::class,
+        Illuminate\Cache\CacheServiceProvider::class,
+        Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Illuminate\Cookie\CookieServiceProvider::class,
+        Illuminate\Database\DatabaseServiceProvider::class,
+        Illuminate\Encryption\EncryptionServiceProvider::class,
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+        Illuminate\Hashing\HashServiceProvider::class,
+        Illuminate\Mail\MailServiceProvider::class,
+        Illuminate\Notifications\NotificationServiceProvider::class,
+        Illuminate\Pagination\PaginationServiceProvider::class,
+        Illuminate\Pipeline\PipelineServiceProvider::class,
+        Illuminate\Queue\QueueServiceProvider::class,
+        Illuminate\Redis\RedisServiceProvider::class,
+        Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
+        Illuminate\Session\SessionServiceProvider::class,
+        Illuminate\Translation\TranslationServiceProvider::class,
+        Illuminate\Validation\ValidationServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+
+        /*
+        * Application Services Providers...
+        */
+        App\Infrastructure\Providers\AppServiceProvider::class,
+    ],
 ];

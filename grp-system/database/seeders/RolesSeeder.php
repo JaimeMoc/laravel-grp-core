@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class RolesSeeder extends Seeder
@@ -12,11 +12,18 @@ class RolesSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('roles')->insert([
+        $roles = [
             ['name' => 'admin', 'description' => 'Administrador del sistema'],
             ['name' => 'gestor', 'description' => 'Funcionario/Gestor'],
             ['name' => 'auditor', 'description' => 'Supervisor/Auditor'],
             ['name' => 'operativo', 'description' => 'Usuario operativo'],
-        ]);
+        ];
+
+        foreach ($roles as $role) {
+            DB::table('roles')->updateOrInsert(
+                ['name' => $role['name']],
+                $role
+            );
+        }
     }
 }
