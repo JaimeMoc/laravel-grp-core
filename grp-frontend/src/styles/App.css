@@ -1,0 +1,72 @@
+/* Contenedor principal */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja del formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botones */
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #282c34;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-form button:hover {
+  background-color: #444c56;
+}
+
+/* Botón Microsoft diferenciado */
+.login-form button:nth-of-type(2) {
+  background-color: #0078d4; /* Azul Microsoft */
+}
+
+.login-form button:nth-of-type(2):hover {
+  background-color: #005a9e;
+}
+
+/* Mensajes de error */
+.login-form p {
+  color: red;
+  font-size: 14px;
+}
