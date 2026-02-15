@@ -2,7 +2,6 @@
 
 namespace App\Infrastructure\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Couchbase\Role;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;

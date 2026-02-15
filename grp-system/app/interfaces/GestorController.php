@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Interfaces\Http\Controllers;
+namespace App\Interfaces;
 
 class GestorController extends Controller
 {
