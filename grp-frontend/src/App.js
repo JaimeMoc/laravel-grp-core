@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './styles/App.css';
+import React, { useEffect, useState } from "react";
+import "./styles/App.css";
+import LoginPage from "./interfaces/auth/LoginPage";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    // Revisar si ya existe token en localStorage
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        {isAuthenticated ? (
+            <h1>Bienvenido al sistema GRP</h1>
+        ) : (
+            <LoginPage />
+        )}
+      </div>
   );
 }
 

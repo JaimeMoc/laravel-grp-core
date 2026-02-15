@@ -6,6 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/grp-system/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/grp-system/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/grp-system/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/grp-system/app/Application" isTestSource="false" packagePrefix="Application\" />
+      <sourceFolder url="file://$MODULE_DIR$/grp-system/app/Domain" isTestSource="false" packagePrefix="Domain\" />
+      <sourceFolder url="file://$MODULE_DIR$/grp-system/app/Infrastructure" isTestSource="false" packagePrefix="Infrastructure\" />
+      <sourceFolder url="file://$MODULE_DIR$/grp-system/app/Interfaces" isTestSource="false" packagePrefix="Interfaces\" />
       <excludeFolder url="file://$MODULE_DIR$/grp-system/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/grp-system/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/grp-system/vendor/league/oauth1-client" />
