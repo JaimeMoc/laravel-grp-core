@@ -153,6 +153,7 @@
       <path value="$PROJECT_DIR$/grp-system/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/grp-system/vendor/socialiteproviders/microsoft-azure" />
       <path value="$PROJECT_DIR$/grp-system/vendor/socialiteproviders/manager" />
+      <path value="$PROJECT_DIR$/grp-system/vendor/socialiteproviders/microsoft" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

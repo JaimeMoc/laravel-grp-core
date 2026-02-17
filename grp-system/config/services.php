@@ -35,10 +35,10 @@ return [
         ],
     ],
 
-    'azure' => [
-        'client_id' => env('21e33b15-a2a1-4629-a123-60bc98585cbe'),
-        'client_secret' => env('f7f1c938-dd48-43f0-bfce-da28708c3ca9'),
-        'redirect' => env('http://localhost:8000/auth/microsoft/callback'),
-        'tenant' => env('2b6a25da-614b-4423-9530-64bcbb0aa18c'),
+    'microsoft' => [
+        'client_id' => env('MICROSOFT_CLIENT_ID'),
+        'client_secret' => env('MICROSOFT_CLIENT_SECRET'),
+        'redirect' => env('MICROSOFT_REDIRECT_URI'),
+        'tenant' => env('MICROSOFT_TENANT_ID', 'common'),
     ],
 ];

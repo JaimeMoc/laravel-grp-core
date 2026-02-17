@@ -39,11 +39,11 @@ class AuthController extends Controller
      * Redirige al login de Microsoft (SSO)
      */
     public function redirectToMicrosoft(){
-        return Socialite::driver('azure')->redirect();
+        return Socialite::driver('microsoft')->redirect();
     }
 
     public function handleMicrosoftCallback(){
-        $microsoftUser = Socialite::driver('azure')->user();
+        $microsoftUser = Socialite::driver('microsoft')->user();
         $user = User::firstOrCreate(
             ['email' => $microsoftUser->getEmail()],
             [
