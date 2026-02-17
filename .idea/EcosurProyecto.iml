@@ -22,6 +22,7 @@
       <excludeFolder url="file://$MODULE_DIR$/grp-system/storage/app" />
       <excludeFolder url="file://$MODULE_DIR$/grp-system/storage/framework" />
       <excludeFolder url="file://$MODULE_DIR$/grp-system/vendor/socialiteproviders/microsoft" />
+      <excludeFolder url="file://$MODULE_DIR$/grp-system/vendor/laravel/sanctum" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

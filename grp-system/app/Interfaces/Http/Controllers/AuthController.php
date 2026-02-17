@@ -48,7 +48,7 @@ class AuthController extends Controller
             ['email' => $microsoftUser->getEmail()],
             [
                 'name' => $microsoftUser->getName(),
-                'role_id' => 1 //Falta mapeo por roles (Admin)
+                'role_id' => 4 // Asignamos el id 4, indicandole un rol operativo.
             ]
         );
 
